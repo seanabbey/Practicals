@@ -1,8 +1,16 @@
-lower = int(input("What is the lower? "))
-upper = int(input("What is the upper? "))
+def main():
+    lower = 33
+    upper = 127
 
-while lower < 33 or upper > 127:
-    lower = int(input("What is the lower? Must be 33 or above. "))
-    upper = int(input("What is the upper? Must be 127 or lower. "))
-for i in range(lower, upper + 1):
-    print("{} {}".format(i, chr(i)))
+    get_number(lower, upper)
+
+
+def get_number(lower, upper):
+    uinput = int(input("Enter a number 33-127 "))
+    while uinput < lower or uinput > upper:
+        print("Please enter a valid Number ")
+        uinput = int(input("Enter a number 33-127 "))
+    print("{} {}".format(uinput, chr(uinput)))
+
+
+main()
